@@ -22,5 +22,5 @@ name: Install deps
       
 name: Build app
       run: npm run build
-      working-directory: health - track
+      working-directory: health-track
       //Test 
