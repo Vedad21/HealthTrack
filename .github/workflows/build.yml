@@ -1,0 +1,25 @@
+name: Build App
+
+on:
+  push:
+    branches: [ "main", HEAL-24-Test-push-notifikacija-i-statistike-prijava, HEAL-21-Backend-endpoint-za-listanje-prijavljenih-korisnika, HEAL-22-Sistem-za-slanje-notifikacija-dan-prije-dogadjaja, HEAL-23-Prevencija-duplih-prijava ]
+  pull_request:
+    branches: [ "main", HEAL-24-Test-push-notifikacija-i-statistike-prijava, HEAL-21-Backend-endpoint-za-listanje-prijavljenih-korisnika, HEAL-22-Sistem-za-slanje-notifikacija-dan-prije-dogadjaja, HEAL-23-Prevencija-duplih-prijava ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      
+uses: actions/checkout@v4
+
+      
+name: Install deps
+      run: npm install
+      working-directory: health-track
+
+      
+name: Build app
+      run: npm run build
+      working-directory: health - track
